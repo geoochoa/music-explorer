@@ -9,6 +9,9 @@ interface ModalProps{
     children: React.ReactNode;
 }
 
+/**
+ * Modal, takes advantage of Radix
+ */
 const Modal: React.FC<ModalProps> = ({
     isOpen,
     onChange,

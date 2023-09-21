@@ -11,11 +11,15 @@ import useAuthModal from "@/hooks/useAuthModal";
 
 import Modal from "./Modal";
 
+
+/**
+ * Modal Authentication/Authorization
+ */
 const AuthModal = () => {
     const supabaseClient = useSupabaseClient(); 
     const router = useRouter();
     const { session } = useSessionContext();
-    const { onClose, isOpen } = useAuthModal();
+    const { onClose, isOpen } = useAuthModal(); 
 
     useEffect(() => {
         if (session){
