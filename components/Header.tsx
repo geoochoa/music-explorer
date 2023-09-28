@@ -44,6 +44,7 @@ const Header: React.FC<HeaderProps> = ({
         const {error} = await supabaseClient.auth.signOut();
         player.reset();
         router.refresh();
+        router.push('/')
 
         if(error){
             toast.error(error.message)
