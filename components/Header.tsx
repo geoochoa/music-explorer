@@ -12,6 +12,8 @@ import { useUser } from "@/hooks/useUser";
 import { FaUserAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
 import usePlayer from "@/hooks/usePlayer";
+// import { useEffect, useState } from "react";
+// import { useColorContext } from "@/hooks/useColor";
 
 interface HeaderProps {
     children: React.ReactNode;
@@ -28,6 +30,15 @@ const Header: React.FC<HeaderProps> = ({
 
     const supabaseClient = useSupabaseClient();
     const {user} = useUser();
+    
+    const headerColor = 'from-[#052e16]';
+    // const [headerColor, setHeaderColor] = useState('from-[#052e16]')
+    // const { colorValue } = useColorContext();
+
+    // useEffect(() => {
+    //     // setHeaderColor(`from-[${headerColor}]`)
+    //     console.log(colorValue)
+    // }, [colorValue]); 
 
     const handleLogout = async () => {
         const {error} = await supabaseClient.auth.signOut();
@@ -40,11 +51,11 @@ const Header: React.FC<HeaderProps> = ({
             toast.success('Logged Out')
         }
     }
-  return (
+  return ( //curr color
     <div className={twMerge(`
     h-fit
     bg-gradient-to-b
-    from-emerald-800
+    ${headerColor}
     p-6
     `, 
     className
@@ -75,12 +86,12 @@ const Header: React.FC<HeaderProps> = ({
                             className="bg-white px-6 py-2">
                             Logout
                         </Button>
-                        <Button
+                        {/* <Button
                             onClick={() => router.push('/account')}
                             className="bg-white"
                         >
                             <FaUserAlt />
-                        </Button>
+                        </Button> */}
                     </div>
                     ) : (
                     <>

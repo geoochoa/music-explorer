@@ -42,6 +42,14 @@ const AuthModal = () => {
             magicLink
             providers={["github"]}
             supabaseClient={supabaseClient}
+            localization={{
+                variables: {
+                  sign_in: {
+                    email_label: 'Email address [Demo: user.explorer23@gmail.com]',
+                    password_label: 'Your password [Demo: #Music23]',
+                  },
+                },
+              }}
             appearance={{
                 theme: ThemeSupa,
                 variables: {
@@ -50,7 +58,7 @@ const AuthModal = () => {
                             brand: '#404040',
                             brandAccent: '#22c55e'
                         }
-                    }
+                    },
                 }
             }}
         />
