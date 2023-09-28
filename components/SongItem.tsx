@@ -4,6 +4,7 @@ import useLoadImage from "@/hooks/useLoadImage"
 import { Song } from "@/types"
 import Image from "next/image"
 import PlayButton from "./PlayButton"
+// import { useColorContext } from "@/providers/ColorProvider"
 
 interface SongItemsProps{
     data: Song,
@@ -12,12 +13,21 @@ interface SongItemsProps{
 
 const SongItem: React.FC<SongItemsProps> = ({
     data,
-    onClick
+    onClick,
 }) => {
+    // const { setColorValue } = useColorContext();
     const imagePath = useLoadImage(data)
+
+    // const handleHover = () => {
+    //     const dynamicHexValue = '#FF5733'; //should be dom value from img
+    //     // setColorValue(dynamicHexValue);
+    //     // console.log("setting....", dynamicHexValue)
+    //     // console.log(imagePath)
+    // }
   return (
     <div
         onClick={()=> onClick(data.id)}
+        // onMouseEnter={() => {handleHover()}}
         className="
             relative
             group
