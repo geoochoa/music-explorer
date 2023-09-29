@@ -5,8 +5,8 @@ This is a music explorer site most similar to Spotify.
 Meant to familiarize myself more with Next.js and Supabase, while emphasizing React.js paradigms.
 
 ## How
-A mixture of tutorials, self-learning, and continuing practice to apply new features and further learning.
-Next.js, React,js, Supabase, Tailwind
+A mixture of tutorials, self-learning, and continuing practice to apply new features and further learning.  
+Next.js, React,js, Supabase, Tailwind  
 Relevant: https://www.youtube.com/watch?v=2aeMRB8LL4o
 
 ## Getting Started
